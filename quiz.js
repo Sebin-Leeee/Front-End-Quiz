@@ -34,33 +34,33 @@ function getQuestion(){
         }
     });
     container.appendChild(answersList);
-
 }
 
 getQuestion()
 //
 function checkCorrect(){
     const selected = selectedAnswer[currentQ];
-    const correct = quizData.results[currentQ].correct_answer;
-    
+    const correct = quizData.results[currentQ].correct_answer; 
     if(selected === correct){
         score[currentQ] = 1;
     } else if(selected !== correct){
         wrongAnswer[currentQ] = selected;
         score[currentQ] = 0;
     }
+    sessionStorage.setItem('selectedAnswer', JSON.stringify(selectedAnswer));
 }
 //
 function nextBtn(){
     checkCorrect();
     currentQ++;
-     if (currentQ < quizData.results.length){
+    if (currentQ < quizData.results.length){
         answersList.remove();
         getQuestion();
         console.log("CurrentQ =" + currentQ);
         console.log("Score =" +score);
-    }  else {
-        window.location.href = "result.html"
+    } else {
+        sessionStorage.setItem('score', JSON.stringify(score));
+        window.location.href = "result.html";
     }
 }
 
@@ -80,3 +80,4 @@ function backBtn(){
     }
 }
 //
+
