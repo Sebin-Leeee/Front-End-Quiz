@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalScore = 0;
     let wrongAnswers = 0;
     let correctAnswers = 0;
-    let wrongAnswerIndex = 0;
 
     for (let i = 0; i < scoreData.length; i++) {
         totalScore += scoreData[i];
@@ -34,10 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < quizData.results.length; i++) {
         const question = quizData.results[i].question;
         const correctAnswer = quizData.results[i].correct_answer;
-        const selectedAnswer = JSON.parse(sessionStorage.getItem(`selectedAnswer${i}`));
+        let selectedAnswer = JSON.parse(sessionStorage.getItem(`selectedAnswer${i}`));
     
+        if (!selectedAnswer) {
+            selectedAnswer = "No answer selected";
+        }
+
         if (scoreData[i] === 0) {
-            const wrongAnswer = JSON.parse(sessionStorage.getItem(`wrongAnswer${i}`));
+            let wrongAnswer = JSON.parse(sessionStorage.getItem(`wrongAnswer${i}`));
+            if (!wrongAnswer) {
+                wrongAnswer = "No answer selected";
+            }
+
             const listItem = document.createElement('li');
             listItem.innerText = `Q${i + 1}. ${question} - Your answer: ${wrongAnswer}, Correct answer: ${correctAnswer}`;
             wrongAnswersList.appendChild(listItem);
