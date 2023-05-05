@@ -38,12 +38,12 @@ function getQuestion(){
 
 getQuestion()
 //
-function checkCorrect(){
+function checkCorrect() {
     const selected = selectedAnswer[currentQ];
     const correct = quizData.results[currentQ].correct_answer; 
     if(selected === correct){
         score[currentQ] = 1;
-    } else if(selected !== correct){
+    } else if(selected !== correct) {
         wrongAnswer[currentQ] = selected;
         score[currentQ] = 0;
     }
@@ -58,6 +58,9 @@ function nextBtn(){
         getQuestion();
         console.log("CurrentQ =" + currentQ);
         console.log("Score =" +score);
+    } else {
+        sessionStorage.setItem('score', JSON.stringify(score));
+        window.location.href = "result.html";
     } else {
         sessionStorage.setItem('score', JSON.stringify(score));
         window.location.href = "result.html";
