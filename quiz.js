@@ -40,14 +40,16 @@ getQuestion()
 //
 function checkCorrect() {
     const selected = selectedAnswer[currentQ];
-    const correct = quizData.results[currentQ].correct_answer; 
-    if(selected === correct){
+    const correct = quizData.results[currentQ].correct_answer;
+
+    if(selected === correct) {
         score[currentQ] = 1;
     } else if(selected !== correct) {
         wrongAnswer[currentQ] = selected;
         score[currentQ] = 0;
     }
-    sessionStorage.setItem('selectedAnswer', JSON.stringify(selectedAnswer));
+    // saves each answer separately :)
+    sessionStorage.setItem(`selectedAnswer${currentQ}`, JSON.stringify(selected));
 }
 //
 function nextBtn(){
@@ -58,9 +60,6 @@ function nextBtn(){
         getQuestion();
         console.log("CurrentQ =" + currentQ);
         console.log("Score =" +score);
-    } else {
-        sessionStorage.setItem('score', JSON.stringify(score));
-        window.location.href = "result.html";
     } else {
         sessionStorage.setItem('score', JSON.stringify(score));
         window.location.href = "result.html";
