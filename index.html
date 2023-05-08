@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="styles.css">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div>
-        <h1>
-            WELCOME TO QUIZLET
-        </h1>
-        <P>Test your knowledge and challenge your friends with our vast collection of fun and engaging quizzes</P>
-    </div>
-    
-    <div>
+    <div class="main-container">
         <div>
-            <label for="category">Category</label>
-            <select name="category" id="category">
-                <option>Select Your Category</option>
-            </select>
+            <h1 class="heading">
+                WELCOME TO QUIZLET
+            </h1>
+            <div><P class="para-style">Test your knowledge and challenge your friends with our vast collection of fun and engaging quizzes</P></div>
         </div>
 
         <div>
-            <label for="number">Category</label>
-            <select name="number" id="number">
-                <option>10</option>
-            </select>
-        </div>
-        <div>
-            <label for="difficulty">Category</label>
-            <select name="difficulty" id="difficulty">
-                <option>Easy</option>
-                <option>Medium</option>
-                <option>Hard</option>
-            </select>
-        </div>
-        <button onclick=getQuiz()>Let's Start</button>
-    </div>
+            <div>
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <option>Select Your Category</option>
+                </select>
+            </div>
 
-    <div id="error">
-        Error: must select a category
+            <div>
+                <label for="number">Category</label>
+                <select name="number" id="number">
+                    <option>10</option>
+                </select>
+            </div>
+            <div>
+                <label for="difficulty">Category</label>
+                <select name="difficulty" id="difficulty">
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+            </div>
+            <button onclick=getQuiz()>Let's Start</button>
+        </div>
+
+        <div id="error">
+            Error: must select a category
+        </div>
+        <script src="index.js"></script>
     </div>
-    <script src="index.js"></script>
 </body>
+
 </html>
