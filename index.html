@@ -1,53 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizlet | Home</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/components/navbar/navbar.css" rel="stylesheet" />
+    <link href="/components/footer/footer.css" rel="stylesheet" />
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="main-container">
-        <div>
-            <h1 class="heading">
-                WELCOME TO QUIZLET
-            </h1>
-            <div><P class="para-style">Test your knowledge and challenge your friends with our vast collection of fun and engaging quizzes</P></div>
-        </div>
-
-        <div>
-            <div>
-                <label for="category">Category</label>
-                <select name="category" id="category">
-                    <option>Select Your Category</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="number">Category</label>
-                <select name="number" id="number">
-                    <option>10</option>
-                </select>
-            </div>
-            <div>
-                <label for="difficulty">Category</label>
-                <select name="difficulty" id="difficulty">
-                    <option>Easy</option>
-                    <option>Medium</option>
-                    <option>Hard</option>
-                </select>
-            </div>
-            <button onclick=getQuiz()>Let's Start</button>
-        </div>
-
-        <div id="error">
-            Error: must select a category
-        </div>
-        <script src="index.js"></script>
+  <header>
+    <div class="navigation">
+      <button class="hamburger" onclick="show()">
+        <img src="/assets/menu.png" />
+      </button>
+      <nav>
+        <h1 class="menutitle">Menu</h1>
+        <ul>
+          <li><a class="a" href="/">Home</a></li>
+          <li><a class="a" href="quizzes.html">Quizzes</a></li>
+        </ul>
+      </nav>
     </div>
-</body>
+    <script src="/components/navbar/nav.js"></script>
+  </header>
 
+  <body>
+    <!-- hero section -->
+    <div class="hero_container">
+      <h1 class="h1">Welcome to Quizlet!</h1>
+      <p class="hero_description">
+        Test your knowledge and challenge your friends with our vast collection
+        of fun and engaging quizzes!
+      </p>
+      <img src="assets/scroll-down.png" alt="scroll-down" class="scroll_down" />
+    </div>
+
+    <!-- section 2 -->
+    <div class="sectiontwo_container">
+      <h2 class="h2">Featured Quizzes</h2>
+      <p class="descriptiontwo">
+        Try our featured quizzes to test your knowledge, challenge your skills,
+        and have fun with a variety of topics!
+      </p>
+
+      <div class="card_group">
+        <!-- card 1 -->
+        <div class="card-wrapper">
+          <div class="card-container">
+            <div class="card_image">
+              <img src="assets/marvelvscapcom.png" alt="marvelvscapcom" />
+            </div>
+            <div class="inner-container">
+              <div class="card_title">
+                <p>
+                  Marvel vs Capcom 2: New age of Heroes was released in what
+                  year?
+                </p>
+              </div>
+              <div class="medium"><p>Medium</p></div>
+              <div class="genre">
+                <p>genre</p>
+                <p>Entertainment: Video Games</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+
+        <div class="card-wrapper">
+          <div class="card-container">
+            <div class="card_image">
+              <img src="assets/jvm.jpg" alt="marvelvscapcom" />
+            </div>
+            <div class="inner-container">
+              <div class="card_title">
+                <p>What does the computer software acronym JVM stand for?</p>
+              </div>
+              <div class="easy"><p>EASY</p></div>
+              <div class="genre">
+                <p>genre</p>
+                <p>Science: Computers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+
+        <div class="card-wrapper">
+          <div class="card-container">
+            <div class="card_image">
+              <img src="assets/monopoly.png" alt="marvelvscapcom" />
+            </div>
+            <div class="inner-container">
+              <div class="card_title">
+                <p>
+                  The board game "Monopoly" is a variation of what board game?
+                </p>
+              </div>
+              <div class="hard"><p>hard</p></div>
+              <div class="genre">
+                <p>genre</p>
+                <p>Entertainment: Board Games</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer_container">
+      <div class="footer_left">
+        <div class="madeby">
+          <p>MADEBY</p>
+        </div>
+        <div class="divider">
+          <img src="/assets/divider.png" alt="|" class="divider" />
+        </div>
+
+        <div class="madeby">
+          <p>MADHU</p>
+        </div>
+        <div class="madeby">
+          <p>RACHEL</p>
+        </div>
+        <div class="madeby">
+          <p>MEELAUD</p>
+        </div>
+        <div class="madeby">
+          <p>SEBIN</p>
+        </div>
+        <div class="madeby">
+          <p>OLIVIA</p>
+        </div>
+      </div>
+
+      <div class="footer_right">
+        <div class="footer_links">
+          <a href="#"><p>Home ↗</p></a>
+          <div class="divider">
+            <img src="/assets/divider.png" alt="|" class="divider" />
+          </div>
+        </div>
+
+        <div class="footer_links">
+          <a href="quizzes.html"> <p>Quizzes ↗</p> </a>
+          <div class="divider">
+            <img src="/assets/divider.png" alt="|" class="divider" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>

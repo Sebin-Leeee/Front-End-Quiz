@@ -72,5 +72,3 @@ function getQuiz(){
     })
     .catch(error => console.error(error));
 }
-
-   

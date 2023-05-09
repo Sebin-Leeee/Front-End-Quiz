@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizlet | Quizzes</title>
+</head>
+<body>
+    <div>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option>Select Your Category</option>
+        </select>
+
+      <div>
+        <label for="number">Category</label>
+        <select name="number" id="number">
+          <option>10</option>
+        </select>
+      </div>
+      <div>
+        <label for="difficulty">Category</label>
+        <select name="difficulty" id="difficulty">
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+      </div>
+      <button onclick="getQuiz()">Let's Start</button>
+    </div>
+
+    <div id="error">Error: must select a category</div>
+    <script src="quizzes.js"></script>
+</body>
+</html>

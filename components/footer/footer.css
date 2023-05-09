@@ -1,0 +1,59 @@
+@import url("https://fonts.cdnfonts.com/css/chakra-petch");
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee5e9;
+}
+
+.footer_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10rem;
+}
+
+.madeby {
+  display: flex;
+  font-family: 'Chakra Petch', sans-serif;
+  color: #564154;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  font-size: 14px;
+
+}
+
+.divider {
+  margin: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10rem;
+
+}
+
+.footer_links {
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Chakra Petch', sans-serif;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0.5rem;
+  font-size: 14px;
+}
+
+.footer_links a {
+  text-decoration: none;
+  color: #564154;
+}
+
