@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+body {
+    background-image: url("/assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.quizlet {
+    font-size: 64px;
+    font-family: 'Bruno Ace', sans-serif;
+    text-transform: uppercase;
+    color: #eee5e9;
+    margin: 0.3em;
+    font-weight: 400;
+    line-height: 77px;
+    letter-spacing: 0.1em;
+}
+
+.container {
+    background-image: url("/assets/glassrectangle.png");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+}
+
+.titledescription {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.h1 {
+    display: flex;
+    font-family: 'Bruno Ace', sans-serif;
+    font-size: 48px;
+    color: #eee5e9;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 1rem;
+    text-align: center;
+    margin: 0.5em;
+}
+
+.p {
+    display: flex;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 24px;
+    color: #eee5e9;
+    font-weight: 400;
+    text-align: center;
+    width: 45%;
+    margin: 0.5em;
+}
+
+.amount {
+    visibility: hidden;
+}
+
+.selection_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.selection_group_category, .selection_group_difficulty {
+    width: 225px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px; /* Adds a margin around the groups */
+}
+
+.selection_group_category {
+    width: 20%;
+    margin-top: 3em;
+
+}
+
+.selection_group_difficulty {
+    margin-top: -4.5em;
+    width: 20%;
+}
+
+.label, select {
+    margin: 0 2px; /* Reduces the space between label and select */
+}
+
+
+.label {
+    display: flex;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 24px;
+    color: #eee5e9;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+select {
+    box-sizing: border-box;
+    padding: 16px 30px 16px 15px;  /* Increase right padding */
+    width: 225px;  /* Increase width */
+    height: 56px;
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    border: 2px solid #eee5e9;
+    border-radius: 10px;
+    color: #eee5e9;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 16px;
+}
+
+
+/* button */
+.button {
+    margin: 5em;
+    background: linear-gradient(134deg, rgba(66, 38, 84, 0.15), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    border: 3px solid #82509F;
+    border-radius: 100px;
+    color: #EEE5E9;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+    width: 135px;
+    height: 50px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+  .button:hover {
+    background-image: linear-gradient(114.55deg, rgba(113, 53, 151, 0.9) 2.13%, rgba(66, 38, 84, 0) 98.14%), radial-gradient(97.09% 224.61% at 1.38% 96.94%, rgba(240, 207, 255, 0) 0%, #7D4497 100%), radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(243, 216, 255, 0) 0%, #E4B0FC 100%);
+    border: 3px solid #82509F;
+    border-radius: 100px;
+    color: #EEE5E9;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+    width: 135px;
+    height: 50px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  
+  .error {
+    color: #EEE5E9;
+    font-family: 'chakra petch', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+  }

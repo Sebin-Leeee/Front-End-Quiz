@@ -5,32 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizlet | Quizzes</title>
+    <link href="/css/quizzes.css" rel="stylesheet" />
+    <link href="components/navbar/navbar.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bruno Ace' rel='stylesheet'>
+
 </head>
+
+<!-- nav bar -->
+<header>
+<div>
+  <p class="quizlet">Quizlet</p>
+</div>
+<div class="navigation">
+  <button class="hamburger" onclick="show()">
+    <img src="/assets/menu.png" />
+  </button>
+  <nav>
+    <h1 class="menutitle">Menu</h1>
+    <ul>
+      <li><a class="a" href="/">Home</a></li>
+      <li><a class="a" href="#">Quizzes</a></li>
+    </ul>
+  </nav>
+</div>
+<script src="/components/navbar/nav.js"></script>
+</header>
+<!-- -->
+
 <body>
-    <div>
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option>Select Your Category</option>
-        </select>
-
-      <div>
-        <label for="number">Category</label>
-        <select name="number" id="number">
-          <option>10</option>
-        </select>
-      </div>
-      <div>
-        <label for="difficulty">Category</label>
-        <select name="difficulty" id="difficulty">
-          <option>Easy</option>
-          <option>Medium</option>
-          <option>Hard</option>
-        </select>
-      </div>
-      <button onclick="getQuiz()">Let's Start</button>
+  <div class="container">
+    <div class="titledescription">
+      <h1 class="h1">Welcome to Quizlet!</h1>
+      <p class="p">Choose from the diverse range of categories presented below and click on your preferred option to begin the quiz
+      </p>
     </div>
-
-    <div id="error">Error: must select a category</div>
+    <div class="selection_group_category">
+      <label for="category" class="label">Category</label>
+      <select name="category" id="category">
+          <option>Select Your Category</option>
+      </select>
+  </div>
+  
+      <div class="selection_group amount">
+          <label for="number" class="label">Number</label>
+          <select name="number" id="number">
+            <option>10</option>
+          </select>
+      </div>
+  
+      <div class="selection_group_difficulty">
+        <label for="difficulty" class="label">Difficulty</label>
+        <select name="difficulty" id="difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+    </div>
+  
+    <button onclick="getQuiz()" class="button">Let's Start</button>
+  </div>
+  
+    <div id="error" class="error">Error: must select a category</div>
     <script src="quizzes.js"></script>
+  </div>
+
+
 </body>
 </html>
