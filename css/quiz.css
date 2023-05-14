@@ -125,7 +125,6 @@ body {
 .timer{
     width: 5rem;
     min-height: 5rem;
-    background-color: #7D4497;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +134,7 @@ body {
     border-radius: 100px;
     color: #EEE5E9;
     font-family: 'Chakra Petch', sans-serif;
-    font-size:1.5rem;
+    font-size:1.rem;
     cursor: pointer;
     font-weight: 600;
     line-height: 20px;

@@ -92,7 +92,8 @@ function checkTime(){
     timer.innerHTML = c_minutes+":"+c_seconds;
     if(total_seconds<=0){
         setTimeout(() => {
-            window.location.href = "quizzes.html";
+            window.alert("Sorry, times up :(");
+            window.location.href = "timeout.html";
         }, 1000);
     } else {
         total_seconds = total_seconds-1;
