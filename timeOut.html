@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="/css/quiz.css" rel="stylesheet" />
+    <title>Quizlet | Quizzes</title>
+    <link href="/css/quizzes.css" rel="stylesheet" />
     <link href="components/navbar/navbar.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Bruno Ace' rel='stylesheet'>
-</head>
 
+</head>
 
 <!-- nav bar -->
 <header>
@@ -36,19 +36,15 @@
 
 <body>
     <div class="container">
-        <div id="timer" class="timer">00:00</div>
-        <div id="container" class="question__container">
-            <h3 id="questionText" class="questionText"></h3>
-            <ul id="answerList" class="answerList"></ul>
+        <div class="titledescription">
+            <h1 class="h1">Times Out :(</h1>
+            <p class="p">Please try again
+            </p>
         </div>
-        <div>
-            <button onclick=backBtn() class="btn">Back</button>
-            <button id="nextButton" onclick=nextBtn() class="btn">Next</button>
 
-        </div>
-    </div>
+       
+        <a href="quizzes.html"><button class="button">Restart</button></a>
 
-    <script src="quiz.js"></script>
 
 
 </body>

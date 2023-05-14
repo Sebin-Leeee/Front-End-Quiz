@@ -11,7 +11,7 @@ let wrongAnswer = [];
 
 
 function getQuestion(){
-    questionText.innerText = quizData.results[currentQ].question;
+    questionText.innerText ="Q"+ [currentQ+1]+ ": " + quizData.results[currentQ].question;
     answersList.innerHTML = '';
     nextButton.disabled = true;
 
@@ -78,7 +78,28 @@ function backBtn(){
       
     } else {
         
-         window.location.href = "index.html";
+         window.location.href = "quizzes.html";
     }
 }
-//
+/*Timer*/
+
+const timer = document.getElementById('timer');
+let total_seconds = 60*5;
+let c_minutes = parseInt(total_seconds/60);
+let c_seconds = parseInt(total_seconds%60).toString().padStart(2, "0");
+
+function checkTime(){
+    timer.innerHTML = c_minutes+":"+c_seconds;
+    if(total_seconds<=0){
+        setTimeout(() => {
+            window.location.href = "quizzes.html";
+        }, 1000);
+    } else {
+        total_seconds = total_seconds-1;
+        c_minutes = parseInt(total_seconds/60);
+        c_seconds = parseInt(total_seconds%60).toString().padStart(2, "0");
+        setTimeout(checkTime, 1000);
+    }
+}
+
+checkTime();
