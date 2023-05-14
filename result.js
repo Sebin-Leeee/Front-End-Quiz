@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const listItem = document.createElement('li');
         if (scoreData[i] === 0) {
-            listItem.innerText = `Q${i + 1}. ${question} - Your answer: ${selectedAnswer}, Correct answer: ${correctAnswer}`;
+            listItem.innerText = `Q${i + 1}. ${question} \n Your answer: ${selectedAnswer} / Correct answer: ${correctAnswer} `;
             wrongAnswersList.appendChild(listItem);
         } else {
-            listItem.innerText = `Q${i + 1}. ${question} - Your answer: ${selectedAnswer}, Correct answer: ${correctAnswer}`;
+            listItem.innerText = `Q${i + 1}. ${question} \n Your answer: ${selectedAnswer} / Correct answer: ${correctAnswer}`;
             correctAnswersList.appendChild(listItem);
         }
     }       

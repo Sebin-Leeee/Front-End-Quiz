@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+body {
+    background-image: url("/assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 52px;
+    font-family: 'Bruno Ace', sans-serif;
+    text-transform: uppercase;
+    color: #eee5e9;
+    margin: 0.3em;
+    font-weight: 400;
+    line-height: 77px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 55px;
+}
+.container1 {
+    background-image: url("/assets/glass.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    height: 600px;;
+    width: 50%;
+    padding: 50px; 
+    border-radius: 20px;
+}
+.container2{
+    background-image: url("/assets/glass.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    height: 600px;
+    width: 50%;
+    padding: 50px; 
+    border-radius: 20px;
+}
+
+.score{
+    font-family: 'Bruno Ace', sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+    color: #eee5e9;
+}
+.summary{
+    font-family: 'Bruno Ace', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #eee5e9;
+}
+.wrongList{
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #eee5e9;
+}
+.correctList{
+    list-style-type: none;
+    margin-top: 15px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+    line-height: 20px; 
+    color: #eee5e9;
+}
+.wrongTitle,
+.correctTitle{
+    font-family: 'Bruno Ace', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #eee5e9;
+}
+
+button {
+    margin: 5em;
+    background: linear-gradient(134deg, rgba(207, 169, 231, 0.448), rgba(232, 181, 237, 0.382));
+    backdrop-filter: blur(10px);
+    color: #eee5e9;
+    border-radius: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
+    width: 235px;
+    height: 50px;
+    font-weight: 600;
+    line-height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 120px;
+}
+
+button a{
+    text-decoration: none;
+}
