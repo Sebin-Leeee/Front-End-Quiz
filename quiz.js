@@ -93,7 +93,7 @@ function checkTime(){
     if(total_seconds<=0){
         setTimeout(() => {
             window.alert("Sorry, times up :(");
-            window.location.href = "timeout.html";
+            window.location.href = "timeOut.html";
         }, 1000);
     } else {
         total_seconds = total_seconds-1;
